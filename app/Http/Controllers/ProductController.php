@@ -39,9 +39,11 @@ class ProductController extends Controller
 
         $product = Product::find(1);
 
-        $response = Http::withBasicAuth("XXXX","XXXXX")
-            ->post("https://localhost",
-                ['body' => '"id1,"name":"Grapes","price":23,"description":"Grapes Supes","created_at":"2020-10-01T23:48:33.000000Z","updated_at":"2020-10-01T23:48:33.000000Z"}']);
+        var_dump($product->toJson());
+
+        /*$response = Http::withBasicAuth("mortgage_connect","#zeb86T0#2")
+            ->post("https://clarity-uat.amcfirst.com/listener_vendor",
+                ['body' => '{"mortgages":[{"amount":600.00,"documentBook":2112,"documentNumber":1,"documentPage":195,"documentType":"Mortgage","executedDate":null,"granteeName":null,"grantorName":null,"recordedDate":null},{"amount":650.00,"documentBook":21121,"documentNumber":12,"documentPage":1951,"documentType":"Mortgage","executedDate":null,"granteeName":null,"grantorName":null,"recordedDate":null}]}']);
 
 
         var_dump($response);
@@ -49,8 +51,7 @@ class ProductController extends Controller
         var_dump($response->body());
 
         var_dump(json_encode($product));
-
-        return response()->json($response);
+        return response()->json($response);*/
 
     }
 
